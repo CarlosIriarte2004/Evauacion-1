@@ -1,0 +1,119 @@
+<!-- Estoy usando la estructura estándar de HTML5 y declaro el idioma en español para accesibilidad y SEO."-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo-->
+    <title>Comidas Bolivia</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Imagen Restaurant.png">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <header class="topbar">
+        <a href="index.html">
+            <img src="Imagen Restaurant.png" alt="Comidas Bolivianas" class="logo-barra">
+        </a>
+        <nav class="nav-links">
+            <a href="pide_aqui.html">Pide aquí</a>
+            <a href="restaurantes.html">Restaurantes</a>
+            <a href="comidasBolivia.html">Comidas Bolivia</a>
+            <a href="cupones.html">Cupones</a>
+            <a href="trabajaNosotros.html">Trabaja con Nosotros</a>
+        </nav>
+        <!--"Organicé el header con Flexbox (CSS) para tener el logo, navegación y acciones de usuario bien alineadas."-->
+
+        <div class="right-section">
+            <button class="btn-inscribirse">Iniciar Sesión</button>
+            <button class="btn-carrito">
+                <span class="cart-icon">&#128717;</span> $0
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR DEL INDEX -->
+    <div class="index-contenido">
+
+        <!-- Selector de idioma -->
+        <div class="idioma-selector">🌐 ES</div>
+
+        <!-- Logo Central -->
+        <div class="logo-centro">
+            <img src="Imagen Restaurant.png" alt="Logo Central">
+        </div>
+
+        <!-- Bienvenida -->
+        <div class="bienvenida">
+            <h1>¡Bienvenido a Comidas Bolivia!</h1>
+            <p>Descubre sabores únicos y tradicionales de nuestra tierra.</p>
+            <h2 class="subtitulo-seccion">Oferta de la Semana</h2>
+        </div>
+
+        <!-- TARJETAS DE COMIDA -->
+        <div class="promo-container">
+            <!-- Asado de Res con Yuca -->
+            <div class="promo-card">
+                <div class="promo-img-container">
+                    <img src="asado-res-y-yuca.png" alt="Asado de Res con Yuca" class="promo-img">
+                </div>
+                <div class="promo-content">
+                    <h2>Asado de Res con Yuca</h2>
+                    <p>Jugosos trozos de carne cocidos a fuego lento, acompañados de suaves yucas y arroz graneado. Un plato que resalta la esencia de la cocina boliviana.</p>
+                    <button class="promo-btn" onclick="mostrarTexto('texto1')">Ver más</button>
+                    <div id="texto1" class="texto-oculto">
+                        Se acabo waway!!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carne a la Olla -->
+            <div class="promo-card">
+                <div class="promo-img-container">
+                    <img src="Carne a la olla.png" alt="Carne a la Olla con arroz, papas y maíz" class="promo-img">
+                </div>
+                <div class="promo-content">
+                    <h2>Carne a la Olla</h2>
+                    <p>Deliciosa carne de res guisada con papas tiernas, maíz cocido y arroz blanco. Una receta casera que refleja los sabores auténticos de nuestra tierra.</p>
+                    <button class="promo-btn" onclick="mostrarTexto('texto2')">Ver más</button>
+                    <div id="texto2" class="texto-oculto">
+                        3 unidades disponibles
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarTexto(id) 
+        {
+            var texto = document.getElementById(id);
+            if (texto.style.display === "none" || texto.style.display === "") 
+            {
+                texto.style.display = "block";
+            } 
+            else 
+            {
+                texto.style.display = "none";
+            }
+        }
+    </script>
+    <!--"Organicé el pie de página en dos partes: enlaces de ayuda y la declaración de derechos de autor."-->
+    <footer class="footer">
+         <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Preguntas Frecuentes</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Información Legal</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Contáctanos</a>
+            </div>
+      <div class="footer-copy">
+        <p>© 2025 Comidas Bolivia. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
