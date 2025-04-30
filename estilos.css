@@ -1,5 +1,4 @@
 /* Fondo general */
-/*"He eliminado los márgenes y el padding predeterminado para asegurarme de que la página ocupe toda la ventana sin espacios no deseados. Además, la tipografía Montserrat le da un estilo moderno y limpio." */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -8,21 +7,14 @@ body {
     overflow-x: hidden;
 }
 
-/* Asegúrate de que no haya borde en el body o header */
-body, header {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-/* BARRA SUPERIOR */    
+/* BARRA SUPERIOR */
 .topbar {
     background-color: #FFA07A;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
-    border-bottom: none; /* Asegúrarnos de que el borde se elimine */
+    border-bottom: none;
     flex-wrap: wrap;
 }
 
@@ -83,7 +75,7 @@ body, header {
     margin-right: 5px;
 }
 
-/* CONTENIDO PARA EL INDEX PRINCIPAL */
+/* CONTENIDO PRINCIPAL */
 .index-contenido {
     background-color: #fdebd0;
     min-height: 100vh;
@@ -98,7 +90,7 @@ body, header {
     color: #4b1f0f;
 }
 
-/* Logo centrado y tamaño corregido */
+/* Logo centrado */
 .logo-centro {
     display: flex;
     justify-content: center;
@@ -110,7 +102,7 @@ body, header {
     height: auto;
 }
 
-/* Bienvenida debajo del logo */
+/* Bienvenida */
 .bienvenida {
     text-align: center;
     margin-top: 20px;
@@ -126,45 +118,21 @@ body, header {
     font-size: 18px;
 }
 
-/* Decoración lateral */
-.lateral-deco {
-    position: absolute;
-    top: 250px;
-    opacity: 0.08;
-    z-index: 0;
-}
-
-.deco-left {
-    left: 10px;
-}
-
-.deco-right {
-    right: 10px;
-}
-
-.lateral-deco img {
-    width: 160px;
-    height: auto;
-}
-
 /* Promo Container */
 .promo-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
     padding: 40px 20px;
-    z-index: 1;
-    position: relative;
+    gap: 20px;
 }
 
-/* Tarjetas */
 .promo-card {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 500px;
+    width: 32%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -183,7 +151,7 @@ body, header {
 
 .promo-img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: transform 0.4s ease, filter 0.3s ease;
 }
@@ -243,8 +211,9 @@ body, header {
     font-weight: normal;
 }
 
+/* Pie de página */
 .footer {
-    background-color: #FFA07A; /* un naranja clarito */; 
+    background-color: #FFA07A;
     color: #fdebd0;
     padding: 40px 20px;
     font-size: 16px;
@@ -274,24 +243,6 @@ body, header {
     color: #ffffff;
 }
 
-.footer-social {
-    margin-top: 20px;
-}
-
-.footer-social h3 {
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
-}
-
 .footer-copy {
     text-align: center;
     width: 100%;
@@ -301,99 +252,21 @@ body, header {
     font-size: 14px;
 }
 
-/* --- MEDIA QUERIES RESPONSIVE --- */
-
-/* Pantallas menores a 1024px (Tablets) */
+/* --- MEDIA QUERIES --- */
 @media (max-width: 1024px) {
     .promo-card {
-      width: 400px; /* Tarjetas más angostas */
+        width: 45%;
     }
-  
-    .logo-barra {
-      height: 45px;
-    }
-  
-    .nav-links a {
-      font-size: 16px;
-    }
-  
-    .btn-inscribirse, .btn-carrito {
-      padding: 6px 14px;
-      font-size: 14px;
-    }
-  }
-  
-  /* Pantallas menores a 768px (Celulares grandes y tablets verticales) */
-  @media (max-width: 768px) {
-    .topbar {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .right-section {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .promo-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
+}
+
+@media (max-width: 768px) {
     .promo-card {
-      width: 90%;
+        width: 90%;
     }
-  
-    .bienvenida h1 {
-      font-size: 28px;
-    }
-  
-    .bienvenida p {
-      font-size: 16px;
-    }
-  
-    .subtitulo-seccion {
-      font-size: 22px;
-    }
-  }
-  
-  /* Pantallas menores a 480px (Celulares pequeños) */
-  @media (max-width: 480px) {
-    .logo-barra {
-      height: 40px;
-    }
-  
+}
+
+@media (max-width: 480px) {
     .promo-card {
-      width: 95%;
+        width: 100%;
     }
-  
-    .promo-content h2 {
-      font-size: 20px;
-    }
-  
-    .promo-content p {
-      font-size: 14px;
-    }
-  
-    .promo-btn {
-      font-size: 14px;
-      padding: 8px 20px;
-    }
-  
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .footer-links {
-      align-items: center;
-    }
-  }
-  
+}
